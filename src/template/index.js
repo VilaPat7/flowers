@@ -1,3 +1,3 @@
-import Main from './Main';
+import Carousel from './Carousel';
 
-export default Main;
+export default Carousel;

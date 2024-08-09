@@ -1,9 +1,9 @@
 import '../../css/App.css';
-import Main from '../../template/Main';
+import Carousel from '../../template/Carousel';
 
 function App() {
   return (
-    <Main/>
+    <Carousel/>
   );
 }
 
