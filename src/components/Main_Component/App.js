@@ -4,13 +4,13 @@ import Carousel from '../../template/Carousel';
 function App() {
   return (
     <div className="App">
-      <div classname="title">
-        <h2>Flowers</h2>
+        <div className="title">
+          <h2>Flowers</h2>
+        </div>
+        <div className="carousel-wrapper">
+          <Carousel />
+        </div>
       </div>
-      
-      <Carousel />
-      
-    </div>
   );
 }
 

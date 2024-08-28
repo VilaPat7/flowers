@@ -3,7 +3,7 @@ import React from 'react';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
-import imageFlower1 from '../image/flower1.png'
+import imageFlower1 from '../image/flower1.png';
 
 const Carousel = () => {
   const settings = {
@@ -18,11 +18,10 @@ const Carousel = () => {
   };
 
   return (
-    <div className="carousel-container" >
+    <div className="carousel-container">
       <Slider {...settings}>
         <div>
-          <p>jf</p>
-          <img src={imageFlower1} alt="First flower" />
+          <img className="images" src={imageFlower1} alt="First flower" />
         </div>
         <div>
           <p>js</p>

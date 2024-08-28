@@ -1,19 +1,28 @@
-.carousel-container{
-    width: 80%;
-    margin: 0 auto;
-    height: 100vh;
-} 
+.carousel-container {
+  width: 90%; /* The width of the carousel is set to 90% of the viewport */
+  margin: 0 auto; /* Centers the carousel horizontally */
+   /* The carousel takes up 100% of the viewport height */
+}
+
 .slick-dots li button:before {
-    font-size: 12px;
-    color: white; 
-  }
-  
-  .slick-dots li.slick-active button:before {
-    opacity: 1;
-    color: white; 
-  }
-  
-  .slick-prev:before,
-  .slick-next:before {
-    color: white;
-  }
+  font-size: 12px; /* The size of the dots */
+  color: white; /* The color of the dots */
+}
+
+.slick-dots li.slick-active button:before {
+  opacity: 1; /* Ensures the active dot is fully visible */
+  color: white; /* Keeps the active dot white */
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: white; /* The color of the previous and next arrows */
+}
+
+.images {
+  width: 100px; /* Adjusted width of the image */
+   /* Maintains aspect ratio while adjusting the height automatically */
+  max-height: 100px; /* Ensures the image height doesn't exceed 100px */
+  display: block; /* Ensures the image is treated as a block-level element */
+  margin: 0 auto; /* Centers the image within its container */
+}
