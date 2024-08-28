@@ -3,7 +3,14 @@ import Carousel from '../../template/Carousel';
 
 function App() {
   return (
-    <Carousel/>
+    <div className="App">
+      <div classname="title">
+        <h2>Flowers</h2>
+      </div>
+      
+      <Carousel />
+      
+    </div>
   );
 }
 
