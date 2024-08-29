@@ -4,6 +4,8 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 import imageFlower1 from '../image/flower1.png';
+import imageFlower2 from '../image/flower2.png';
+import imageFlower3 from '../image/flower3.png';
 
 const Carousel = () => {
   const settings = {
@@ -24,10 +26,10 @@ const Carousel = () => {
           <img className="images" src={imageFlower1} alt="First flower" />
         </div>
         <div>
-          <p>js</p>
+          <img className="images" src={imageFlower2} alt="Second flower" />  
         </div>
         <div>
-          <p>jp</p>
+          <img className="images" src={imageFlower3} alt="Third flower" />
         </div>
       </Slider>
     </div>

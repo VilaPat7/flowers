@@ -1,7 +1,8 @@
 .carousel-container {
-  width: 90%; /* The width of the carousel is set to 90% of the viewport */
+/* The width of the carousel is set to 90% of the viewport */
   margin: 0 auto; /* Centers the carousel horizontally */
-   /* The carousel takes up 100% of the viewport height */
+  width: 90%; /* Adjust width as needed */
+  height: 100vh; 
 }
 
 .slick-dots li button:before {
@@ -18,11 +19,25 @@
 .slick-next:before {
   color: white; /* The color of the previous and next arrows */
 }
-
+.slick-slide,.slick-track, .slick-initialized, .slick-list,
+.slick-active, .slick-current{
+  height: 100%;
+}
 .images {
-  width: 100px; /* Adjusted width of the image */
-   /* Maintains aspect ratio while adjusting the height automatically */
-  max-height: 100px; /* Ensures the image height doesn't exceed 100px */
-  display: block; /* Ensures the image is treated as a block-level element */
+  width: 100px; /* Start smaller */
+  height: auto;
   margin: 0 auto; /* Centers the image within its container */
+  animation: enlargeRotate 3s ease-in-out forwards;
+}
+
+@keyframes enlargeRotate {
+  0% {
+    transform: scale(1.2) rotate(0deg); /* Start smaller and with no rotation */
+  }
+  50% {
+    transform: scale(3) rotate(180deg); /* Enlarge and rotate halfway */
+  }
+  100% {
+    transform: scale(1.2) rotate(360deg); /* Shrink back and complete rotation */
+  }
 }
