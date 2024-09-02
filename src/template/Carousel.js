@@ -6,6 +6,7 @@ import "slick-carousel/slick/slick-theme.css";
 import imageFlower1 from '../image/flower1.png';
 import imageFlower2 from '../image/flower2.png';
 import imageFlower3 from '../image/flower3.png';
+import FlowerModal from '../components/page';
 
 const Carousel = () => {
   const [activeSlide, setActiveSlide] = useState(0);
@@ -16,33 +17,39 @@ const Carousel = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 3500,
+    autoplaySpeed: 3000,
     arrows: true,
     beforeChange: (current, next) => setActiveSlide(next),
+
   };
 
   return (
     <div className="carousel-container">
       <Slider {...settings}>
         <div>
-          <img
+          {/* <img
             className={`images ${activeSlide === 0 ? 'animate' : ''}`}
             src={imageFlower1}
             alt="First flower"
+          /> */}
+          <FlowerModal
+            imageSrc={imageFlower1}
+            isActive={activeSlide === 0} // Pass the isActive prop to trigger animation
+            description="This is a beautiful flower."
           />
         </div>
         <div>
-          <img
-            className={`images ${activeSlide === 1 ? 'animate' : ''}`}
-            src={imageFlower2}
-            alt="Second flower"
+          <FlowerModal
+            imageSrc={imageFlower2}
+            isActive={activeSlide === 1} // Pass the isActive prop to trigger animation
+            description="This is a beautiful flower."
           />
         </div>
         <div>
-          <img
-            className={`images ${activeSlide === 2 ? 'animate' : ''}`}
-            src={imageFlower3}
-            alt="Third flower"
+          <FlowerModal
+            imageSrc={imageFlower3}
+            isActive={activeSlide === 2} // Pass the isActive prop to trigger animation
+            description="This is a beautiful flower."
           />
         </div>
       </Slider>

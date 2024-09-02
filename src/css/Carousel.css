@@ -58,3 +58,27 @@
     transform: scale(1.2) rotate(360deg);
   }
 }
+.ReactModal__Overlay {
+  background-color: rgba(0, 0, 0, 0.75) !important;
+  z-index: 1000;
+}
+
+.modal-content {
+  position: relative;
+  background: #fff;
+  padding: 20px;
+  width: 500px;
+  margin: auto;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.modal-close-button {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
