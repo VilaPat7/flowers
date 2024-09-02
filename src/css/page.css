@@ -1,0 +1,49 @@
+.button1{
+    width: 20%;
+    height: 6%;
+    font-family: 'New Century Schoolbook, TeX Gyre Schola, serif';
+    background-color: aliceblue;
+    color: #01040d;
+    background-color: aliceblue;
+}
+.sliding-button {
+    text-decoration: none;
+    color: aliceblue;
+    display: inline-block;
+    width: 20%;
+    height: 6%;
+    position: relative;
+    padding: 15px 30px;
+    border: 1px solid;
+    border-image: aliceblue;
+    border-image-slice: 1;
+    margin: 10px 20px;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    overflow: hidden;
+    letter-spacing: 2px;
+    transition: .8s cubic-bezier(.165, .84, .44, 1);
+  }
+  .sliding-button:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 0;
+    width: 100%;
+    z-index: -1;
+    color: #0a0a17;
+    background: aliceblue;
+    transition: .8s cubic-bezier(.165, .84, .44, 1);
+  }
+  .sliding-button:hover {
+    background: rgba(255, 255, 255, 0);
+  }
+  .sliding-button:hover:before {
+    bottom: 0%;
+    top: auto;
+    height: 100%;
+  }
+.images {
+    cursor: pointer;
+}

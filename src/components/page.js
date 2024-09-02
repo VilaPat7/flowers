@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import Modal from 'react-modal';
 import '../css/Carousel.css';
+import '../css/page.css';
 
 Modal.setAppElement('#root'); // Necessary for accessibility reasons
 
@@ -18,7 +19,6 @@ const FlowerModal = ({ imageSrc, description, isActive }) => {
         src={imageSrc}
         alt="Flower"
         onClick={openModal}
-        style={{ cursor: 'pointer' }}
       />
       <Modal
         isOpen={isOpen}
@@ -32,28 +32,30 @@ const FlowerModal = ({ imageSrc, description, isActive }) => {
             marginRight: '-50%',
             transform: 'translate(-50%, -50%)',
             width: '70%', // Adjust as needed
-            padding: '20px',
+            padding: '40px',
             height: '70%',
-            borderRadius: '10px',
+            // borderRadius: '10px',
+            borderColor: '#0a0a17',
             zIndex: 1000, // Ensure it overlaps the carousel
-            background: '#01040d',
+            background: '#0a0a17',
             color: 'aliceblue',
             display: 'flex',
             flexDirection: 'column',
-            justifyContent: 'center',
+            justifyContent: 'space-between',
             alignItems: 'center',
             fontFamily: 'New Century Schoolbook, TeX Gyre Schola, serif',
-
+            
         },
           overlay: {
             backgroundColor: 'rgba(0, 0, 0, 0.75)', // Dark overlay
             zIndex: 1000, // Ensure the overlay also overlaps
           },
         }}
+      
       >
         <h2>Flower Description</h2>
         <p>{description}</p>
-        <button onClick={closeModal}>Close</button>
+        <button className="sliding-button" onClick={closeModal}>Close</button>
       </Modal>
     </div>
   );
