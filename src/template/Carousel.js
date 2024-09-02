@@ -35,21 +35,42 @@ const Carousel = () => {
           <FlowerModal
             imageSrc={imageFlower1}
             isActive={activeSlide === 0} // Pass the isActive prop to trigger animation
-            description="This is a beautiful flower."
+            alt="Rose"
+            title="Rose"
+            description="An umbrella name for species and varieties of the genus Rósa, 
+            cultivated by humans and growing in the wild."
+            fact="According to the Talmud, pink roses were the only flowers allowed to grow in Jerusalem."
+            care="After trimming the stems and leaves, 
+            place the flowers in a vase of cool water, giving them time to adapt to room temperature."
+            imageFlower={imageFlower1}
+            alt1="Rose"
           />
         </div>
         <div>
           <FlowerModal
             imageSrc={imageFlower2}
             isActive={activeSlide === 1} // Pass the isActive prop to trigger animation
-            description="This is a beautiful flower."
+            alt="Cosmea"
+            title="Cosmea"
+            description="Cosmea (Cosmos) is a genus of beautifully flowering plants of the Compound family."
+            fact="In nature there is a variety of “chocolate cosmos” in the summer period this 
+            flower has a pronounced smell of chocolate with vanilla."
+            care="You don't have to take care of cosmos - it will still be a delight for many months."
+            imageFlower={imageFlower2}
+            alt1="Cosmea"
           />
         </div>
         <div>
           <FlowerModal
             imageSrc={imageFlower3}
+            alt="Chamomile"
             isActive={activeSlide === 2} // Pass the isActive prop to trigger animation
-            description="This is a beautiful flower."
+            title="Chamomile"
+            description="Chamomile is a perennial, frost-resistant, light-loving herbaceous plant with a height of 50-80 cm."
+            fact="Before the advent of modern pigments, women used chamomile decoction to lighten their strands and give them a golden color."
+            care="Systematically add humus and organic matter to the soil where chamomile plants grow, and feed the plants by adding mineral nutrition to the soil for flowering plants."
+            imageFlower={imageFlower3}
+            alt1="Chamomile"
           />
         </div>
       </Slider>

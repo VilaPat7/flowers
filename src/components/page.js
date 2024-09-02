@@ -6,7 +6,7 @@ import '../css/page.css';
 
 Modal.setAppElement('#root'); // Necessary for accessibility reasons
 
-const FlowerModal = ({ imageSrc, description, isActive }) => {
+const FlowerModal = ({ imageSrc, description, title, isActive, fact, care, imageFlower, alt1}) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const openModal = () => setIsOpen(true);
@@ -53,8 +53,20 @@ const FlowerModal = ({ imageSrc, description, isActive }) => {
         }}
       
       >
-        <h2>Flower Description</h2>
-        <p>{description}</p>
+        <h2>{title}</h2>
+        <div className='description-main'>
+          <div className='image-description'>
+            <img className='description-flower' src={imageFlower} alt={alt1}></img>
+          </div>
+          <div className='text-description'>
+            <h3>Description</h3>
+            <p>{description}</p>
+            <h3>How to care for</h3>
+            <p>{care}</p>
+            <h3>Interesting fact </h3>
+            <p>{fact}</p>
+          </div>
+        </div>
         <button className="sliding-button" onClick={closeModal}>Close</button>
       </Modal>
     </div>
