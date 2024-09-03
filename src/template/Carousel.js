@@ -27,14 +27,9 @@ const Carousel = () => {
     <div className="carousel-container">
       <Slider {...settings}>
         <div>
-          {/* <img
-            className={`images ${activeSlide === 0 ? 'animate' : ''}`}
-            src={imageFlower1}
-            alt="First flower"
-          /> */}
           <FlowerModal
             imageSrc={imageFlower1}
-            isActive={activeSlide === 0} // Pass the isActive prop to trigger animation
+            isActive={activeSlide === 0} 
             alt="Rose"
             title="Rose"
             description="An umbrella name for species and varieties of the genus Rósa, 
@@ -49,7 +44,7 @@ const Carousel = () => {
         <div>
           <FlowerModal
             imageSrc={imageFlower2}
-            isActive={activeSlide === 1} // Pass the isActive prop to trigger animation
+            isActive={activeSlide === 1}
             alt="Cosmea"
             title="Cosmea"
             description="Cosmea (Cosmos) is a genus of beautifully flowering plants of the Compound family."
@@ -64,7 +59,7 @@ const Carousel = () => {
           <FlowerModal
             imageSrc={imageFlower3}
             alt="Chamomile"
-            isActive={activeSlide === 2} // Pass the isActive prop to trigger animation
+            isActive={activeSlide === 2} 
             title="Chamomile"
             description="Chamomile is a perennial, frost-resistant, light-loving herbaceous plant with a height of 50-80 cm."
             fact="Before the advent of modern pigments, women used chamomile decoction to lighten their strands and give them a golden color."

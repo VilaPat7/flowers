@@ -1,10 +1,9 @@
-// FlowerModal.js
 import React, { useState } from 'react';
 import Modal from 'react-modal';
 import '../css/Carousel.css';
 import '../css/page.css';
 
-Modal.setAppElement('#root'); // Necessary for accessibility reasons
+Modal.setAppElement('#root'); 
 
 const FlowerModal = ({ imageSrc, description, title, isActive, fact, care, imageFlower, alt1}) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,7 +14,7 @@ const FlowerModal = ({ imageSrc, description, title, isActive, fact, care, image
   return (
     <div>
       <img
-        className={`images ${isActive ? 'animate' : ''}`} // Apply animation class conditionally
+        className={`images ${isActive ? 'animate' : ''}`} 
         src={imageSrc}
         alt="Flower"
         onClick={openModal}
@@ -31,12 +30,11 @@ const FlowerModal = ({ imageSrc, description, title, isActive, fact, care, image
             bottom: 'auto',
             marginRight: '-50%',
             transform: 'translate(-50%, -50%)',
-            width: '70%', // Adjust as needed
+            width: '70%', 
             padding: '40px',
             height: '70%',
-            // borderRadius: '10px',
             borderColor: '#0a0a17',
-            zIndex: 1000, // Ensure it overlaps the carousel
+            zIndex: 1000,
             background: '#0a0a17',
             color: 'aliceblue',
             display: 'flex',
@@ -47,8 +45,8 @@ const FlowerModal = ({ imageSrc, description, title, isActive, fact, care, image
             
         },
           overlay: {
-            backgroundColor: 'rgba(0, 0, 0, 0.75)', // Dark overlay
-            zIndex: 1000, // Ensure the overlay also overlaps
+            backgroundColor: 'rgba(0, 0, 0, 0.75)', 
+            zIndex: 1000, 
           },
         }}
       

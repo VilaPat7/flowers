@@ -26,9 +26,9 @@
 }
 
 .slick-slide{
-  display: flex !important; /* Ensure each slide is a flex container */
-  justify-content: center; /* Center the image horizontally */
-  align-items: center; /* Center the image vertically */
+  display: flex !important; 
+  justify-content: center; 
+  align-items: center; 
 }
 
 .images {
@@ -38,7 +38,6 @@
   max-width: 90%;
   max-height: 90%;
   object-fit: contain;
-  /* Initial state before animation */
   transform: scale(1.2) rotate(0deg);
   transition: transform 5s ease-in-out;
 }
