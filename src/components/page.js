@@ -61,8 +61,10 @@ const FlowerModal = ({ imageSrc, description, title, isActive, fact, care, image
             <p>{description}</p>
             <h3>How to care for</h3>
             <p>{care}</p>
-            <h3>Interesting fact </h3>
-            <p>{fact}</p>
+            <div className='intersting-fact'>
+              <h3>Interesting fact </h3>
+              <p>{fact}</p>
+            </div>
           </div>
         </div>
         <button className="sliding-button" onClick={closeModal}>Close</button>
