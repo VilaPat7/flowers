@@ -1,15 +1,23 @@
 import React, { useState } from 'react';
-import Modal from 'react-modal';
 import '../css/Carousel.css';
 import '../css/page.css';
+import Modal from 'react-modal';
 
-Modal.setAppElement('#root'); 
+Modal.setAppElement('#root');  // Ensure the root element is defined for accessibility
 
-const FlowerModal = ({ imageSrc, description, title, isActive, fact, care, imageFlower, alt1}) => {
+const FlowerModal = ({ imageSrc, description, title, isActive, fact, care, imageFlower, alt1, addToMyPage }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const openModal = () => setIsOpen(true);
   const closeModal = () => setIsOpen(false);
+
+  const handleAddToMyPage = () => {
+    console.log('handleAddToMyPage called with:', title);
+    if (addToMyPage) {
+      addToMyPage(title);  // Pass the title to the function to add it to "My Page"
+    }
+    closeModal();  // Close the modal after adding
+  };
 
   return (
     <div>
@@ -42,14 +50,12 @@ const FlowerModal = ({ imageSrc, description, title, isActive, fact, care, image
             justifyContent: 'space-between',
             alignItems: 'center',
             fontFamily: 'New Century Schoolbook, TeX Gyre Schola, serif',
-            
-        },
+          },
           overlay: {
             backgroundColor: 'rgba(0, 0, 0, 0.75)', 
             zIndex: 1000, 
           },
         }}
-      
       >
         <h2>{title}</h2>
         <div className='description-main'>
@@ -61,13 +67,14 @@ const FlowerModal = ({ imageSrc, description, title, isActive, fact, care, image
             <p>{description}</p>
             <h3>How to care for</h3>
             <p>{care}</p>
-            <div className='intersting-fact'>
+            <div className='interesting-fact'>
               <h3>Interesting fact </h3>
               <p>{fact}</p>
             </div>
           </div>
         </div>
-        <button className="sliding-button" onClick={closeModal}>Close</button>
+        <button className="sliding-button1" onClick={closeModal}>Close</button>
+        <button className="sliding-button1" onClick={handleAddToMyPage}>Add to My</button>
       </Modal>
     </div>
   );

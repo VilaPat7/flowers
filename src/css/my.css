@@ -1,0 +1,62 @@
+h2, h3{
+  font-family:  New Century Schoolbook, TeX Gyre Schola, serif;
+  color: aliceblue;
+}
+h2{
+ font-size: 32px;
+}
+.my_page{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+.inputs{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    padding: 20px;
+    justify-content: space-around;
+    height: 5%;
+}
+.add_flower{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    justify-content: center;
+    height: 100%;
+}
+.sliding-button {
+    height: 100%;
+    text-decoration: none;
+    width: fit-content;
+    /* height: fit-content; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    text-decoration: none;
+    color: aliceblue;
+    margin: 0px;
+     padding: 10px; 
+    background-color: #0a0a17;
+    font-size: 14px;
+    font-family: New Century Schoolbook, TeX Gyre Schola, serif;
+    transition: background-color 0.3s ease;
+  }
+.sliding-button:hover {
+  background-color: #ddd;
+}
+.list_added{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    font-size: 14px;
+}
+input, textarea{
+    font-family: New Century Schoolbook, TeX Gyre Schola, serif;
+}
+textarea{
+    max-width: 250px;
+}
