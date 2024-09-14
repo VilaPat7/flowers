@@ -17,8 +17,8 @@ function App() {
     <Router>
       <div className="App">
         <header className="app-header">
-          <NavLink to="/" className="nav-button" activeClassName="active">Home</NavLink>
-          <NavLink to="/my" className="nav-button" activeClassName="active">My</NavLink>
+          <NavLink to="/" className="nav-button" >Home</NavLink>
+          <NavLink to="/my" className="nav-button">My</NavLink>
         </header>
         <Routes>
           <Route path="/" element={<Home addToMyPage={addToMyPage} />} />

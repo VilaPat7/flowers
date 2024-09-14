@@ -5,14 +5,17 @@ import Modal from 'react-modal';
 
 Modal.setAppElement('#root');  // Ensure the root element is defined for accessibility
 
-const FlowerModal = ({ imageSrc, description, title, isActive, fact, care, imageFlower, alt1, addToMyPage }) => {
+const FlowerModal = ({ imageSrc, description, title, isActive, fact, care, imageFlower, alt1, addToMyPage, activeClassName, ...props }) => {
+  const { activeClassName: _, ...rest } = props;
+  // console.log('FlowerModal props:', rest);
+
   const [isOpen, setIsOpen] = useState(false);
 
   const openModal = () => setIsOpen(true);
   const closeModal = () => setIsOpen(false);
 
   const handleAddToMyPage = () => {
-    console.log('handleAddToMyPage called with:', title);
+    // console.log('handleAddToMyPage called with:', title);
     if (addToMyPage) {
       addToMyPage(title);  // Pass the title to the function to add it to "My Page"
     }
@@ -20,7 +23,7 @@ const FlowerModal = ({ imageSrc, description, title, isActive, fact, care, image
   };
 
   return (
-    <div>
+    <div {...rest}>
       <img
         className={`images ${isActive ? 'animate' : ''}`} 
         src={imageSrc}
@@ -60,7 +63,7 @@ const FlowerModal = ({ imageSrc, description, title, isActive, fact, care, image
         <h2>{title}</h2>
         <div className='description-main'>
           <div className='image-description'>
-            <img className='description-flower' src={imageFlower} alt={alt1}></img>
+            <img className='description-flower' src={imageFlower} alt={alt1} />
           </div>
           <div className='text-description'>
             <h3>Description</h3>
