@@ -9,7 +9,6 @@ const MyPage = () => {
   const [showNoteModal, setShowNoteModal] = useState(false); 
   const [selectedFlowerIndex, setSelectedFlowerIndex] = useState(null); 
 
-  
   const addToMyPage = (flowerTitle) => {
     console.log('addToMyPage called with:', flowerTitle);
     setFlowers([...flowers, { name: flowerTitle, note: '' }]);
@@ -23,14 +22,12 @@ const MyPage = () => {
       setFlowerNote('');
     }
   };
-
  
   const removeFlower = (index) => {
     const updatedFlowers = flowers.filter((_, i) => i !== index);
     setFlowers(updatedFlowers);
   };
 
-  
   const deleteNote = (index) => {
     const updatedFlowers = [...flowers];
     updatedFlowers[index].note = '';
@@ -42,13 +39,11 @@ const MyPage = () => {
     setShowNoteModal(true);
   };
 
-  
   const closeNoteModal = () => {
     setShowNoteModal(false);
     setFlowerNote(''); 
   };
 
- 
   const saveNote = () => {
     if (selectedFlowerIndex !== null) {
       const updatedFlowers = [...flowers];
@@ -61,9 +56,8 @@ const MyPage = () => {
   
   return (
     <div className='my_page'>
-      <h2>My Favorite Flowers</h2>
+      <h2 className='main-title'>My Favorite Flowers</h2>
         
-      
       <div className='inputs'>
         <div className='add_flower'>
           <input
@@ -75,7 +69,6 @@ const MyPage = () => {
           <button className='sliding-button' onClick={addFlower}>Add Flower</button>
         </div>
       </div>
-
       
       <ul>
         {flowers.map((flower, index) => (
@@ -93,7 +86,6 @@ const MyPage = () => {
           </li>
         ))}
       </ul>
-
      
       {showNoteModal && (
         <div className='note-modal'>

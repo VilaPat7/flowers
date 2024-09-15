@@ -6,7 +6,7 @@ function Home() {
   return (
     <>
       <div className="title">
-        <h2>Flowers</h2>
+        <h2 className='main_title'>Flowers</h2>
       </div>
       <div className="carousel-wrapper">
         <Carousel />

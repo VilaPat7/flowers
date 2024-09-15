@@ -7,15 +7,10 @@ Modal.setAppElement('#root');
 
 const FlowerModal = ({ imageSrc, description, title, isActive, fact, care, imageFlower, alt1, addToMyPage, activeClassName, ...props }) => {
   const { activeClassName: _, ...rest } = props;
- 
-
   const [isOpen, setIsOpen] = useState(false);
-
   const openModal = () => setIsOpen(true);
   const closeModal = () => setIsOpen(false);
-
   const handleAddToMyPage = () => {
-   
     if (addToMyPage) {
       addToMyPage(title);  
     }
@@ -44,15 +39,20 @@ const FlowerModal = ({ imageSrc, description, title, isActive, fact, care, image
             width: '70%', 
             padding: '40px',
             height: '70%',
-            borderColor: '#0a0a17',
+            
             zIndex: 1000,
-            background: '#0a0a17',
+            background: '#01040d',
             color: 'aliceblue',
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'space-between',
             alignItems: 'center',
-            fontFamily: 'New Century Schoolbook, TeX Gyre Schola, serif',
+            borderColor: 'aliceblue',
+
+            fontFamily: ' Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif',
+            borderRadius: '1em',
+            
+
           },
           overlay: {
             backgroundColor: 'rgba(0, 0, 0, 0.75)', 

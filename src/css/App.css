@@ -18,31 +18,38 @@ header{
   text-decoration: none;
   color: aliceblue;
   padding: 10px 20px;
-  background-color: #0a0a17;
+  background-color: #01040d;
   /* border-radius: 5px; */
   transition: background-color 0.3s ease;
+  border-radius: 1em;
 }
-
+.main_title{
+  font-size: 52px;
+}
 .nav-button:hover {
   background-color: #ddd;
 }
 .app-header {
-  background-color: #0a0a17;
+  background-color: #01040d;
   width: 100%;
   padding: 5px 50px;
   display: flex;
   gap: 20px;
   font-size: 16px;
-  font-family:  New Century Schoolbook, TeX Gyre Schola, serif;
+  justify-content: center;
+  font-family:  Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
   color: aliceblue;
   box-sizing: border-box;
+  
+  border-bottom: 2px solid;
+  border-color: aliceblue;
 }
 .title {
   text-align: center;
   color:aliceblue;
   font-size: 32px;
   padding: 0px;
-  font-family:  New Century Schoolbook, TeX Gyre Schola, serif;
+  font-family:  Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
 }
 
 .carousel-wrapper {
