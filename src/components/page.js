@@ -3,11 +3,11 @@ import '../css/Carousel.css';
 import '../css/page.css';
 import Modal from 'react-modal';
 
-Modal.setAppElement('#root');  // Ensure the root element is defined for accessibility
+Modal.setAppElement('#root'); 
 
 const FlowerModal = ({ imageSrc, description, title, isActive, fact, care, imageFlower, alt1, addToMyPage, activeClassName, ...props }) => {
   const { activeClassName: _, ...rest } = props;
-  // console.log('FlowerModal props:', rest);
+ 
 
   const [isOpen, setIsOpen] = useState(false);
 
@@ -15,11 +15,11 @@ const FlowerModal = ({ imageSrc, description, title, isActive, fact, care, image
   const closeModal = () => setIsOpen(false);
 
   const handleAddToMyPage = () => {
-    // console.log('handleAddToMyPage called with:', title);
+   
     if (addToMyPage) {
-      addToMyPage(title);  // Pass the title to the function to add it to "My Page"
+      addToMyPage(title);  
     }
-    closeModal();  // Close the modal after adding
+    closeModal(); 
   };
 
   return (

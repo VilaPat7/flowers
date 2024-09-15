@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
-import FlowerModal from './page'; // Assuming FlowerModal is in the same folder
+import FlowerModal from './page'; 
 import '../css/my.css';
 
 const MyPage = () => {
-  const [flowers, setFlowers] = useState([]); // Stores the favorite flowers
-  const [flowerName, setFlowerName] = useState(''); // Stores the new flower's name
-  const [flowerNote, setFlowerNote] = useState(''); // Stores the note for the flower
-  const [showNoteModal, setShowNoteModal] = useState(false); // Controls the visibility of the note modal
+  const [flowers, setFlowers] = useState([]); 
+  const [flowerName, setFlowerName] = useState(''); 
+  const [flowerNote, setFlowerNote] = useState(''); 
+  const [showNoteModal, setShowNoteModal] = useState(false); 
   const [selectedFlowerIndex, setSelectedFlowerIndex] = useState(null); 
 
-  // Function to add a flower to the list
+  
   const addToMyPage = (flowerTitle) => {
     console.log('addToMyPage called with:', flowerTitle);
     setFlowers([...flowers, { name: flowerTitle, note: '' }]);
@@ -19,18 +19,18 @@ const MyPage = () => {
   const addFlower = () => {
     if (flowerName.trim()) {
       setFlowers([...flowers, { name: flowerName, note: '' }]);
-      setFlowerName(''); // Clear the input fields after adding
+      setFlowerName(''); 
       setFlowerNote('');
     }
   };
 
-  // Function to remove a flower from the list
+ 
   const removeFlower = (index) => {
     const updatedFlowers = flowers.filter((_, i) => i !== index);
     setFlowers(updatedFlowers);
   };
 
-  // Function to delete the note for a specific flower
+  
   const deleteNote = (index) => {
     const updatedFlowers = [...flowers];
     updatedFlowers[index].note = '';
@@ -42,13 +42,13 @@ const MyPage = () => {
     setShowNoteModal(true);
   };
 
-  // Function to close the note modal
+  
   const closeNoteModal = () => {
     setShowNoteModal(false);
-    setFlowerNote(''); // Clear the note input when closing the modal
+    setFlowerNote(''); 
   };
 
-  // Function to save the note for a specific flower
+ 
   const saveNote = () => {
     if (selectedFlowerIndex !== null) {
       const updatedFlowers = [...flowers];
@@ -57,13 +57,13 @@ const MyPage = () => {
       closeNoteModal();
     }
   };
-  var flower_from = <FlowerModal addToMyPage={addToMyPage} />
+  // var flower_from = <FlowerModal addToMyPage={addToMyPage} />
   
   return (
     <div className='my_page'>
       <h2>My Favorite Flowers</h2>
         
-      {/* Input to add a new flower */}
+      
       <div className='inputs'>
         <div className='add_flower'>
           <input
@@ -76,7 +76,7 @@ const MyPage = () => {
         </div>
       </div>
 
-      {/* List of favorite flowers */}
+      
       <ul>
         {flowers.map((flower, index) => (
           <li className='list_added' key={index}>
@@ -94,7 +94,7 @@ const MyPage = () => {
         ))}
       </ul>
 
-      {/* Modal for adding/editing notes */}
+     
       {showNoteModal && (
         <div className='note-modal'>
           <div className='note-modal-content'>
@@ -113,7 +113,7 @@ const MyPage = () => {
         </div>
       )}
       
-      {/* Render FlowerModal and pass the addToMyPage function */}
+     
       {/* <FlowerModal addToMyPage={addToMyPage} /> */}
     </div>
   );
